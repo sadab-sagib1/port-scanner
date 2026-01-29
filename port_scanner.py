@@ -64,3 +64,22 @@ def main():
         if is_port_open(target_ip, port):
             open_ports.append((port, service))
             print(f"OPEN  {port:<5} ({service})")
+
+    end = time.time()
+
+    # Summary
+    print("\nSummary")
+    print("-------")
+    if open_ports:
+        print(f"Open ports found: {len(open_ports)}")
+    else:
+        print("No open ports found in the common list.")
+
+    print(f"Scan time: {end - start:.2f} seconds\n")
+
+    # Simple reminder about ethics
+    print("Note: Only scan devices you own or have permission to test.\n")
+
+
+if __name__ == "__main__":
+    main()        
