@@ -34,3 +34,10 @@ def is_port_open(target_ip: str, port: int, timeout: float = 0.5) -> bool:
         return result == 0
     except OSError:
         return False
+    
+def main():
+    # Check user input
+    if len(sys.argv) != 2:
+        print("Usage: python3 port_scanner.py <hostname-or-ip>")
+        print("Example: python3 port_scanner.py google.com")
+        return
