@@ -41,3 +41,11 @@ def main():
         print("Usage: python3 port_scanner.py <hostname-or-ip>")
         print("Example: python3 port_scanner.py google.com")
         return
+    target = sys.argv[1]
+
+    # Convert hostname -> IP
+    try:
+        target_ip = socket.gethostbyname(target)
+    except socket.gaierror:
+        print("Could not resolve that hostname. Check spelling.")
+        return
