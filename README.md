@@ -15,6 +15,7 @@ A beginner port scanner that checks a small list of common TCP ports on a target
 ## Run
 ```bash
 python3 port_scanner.py google.com
+```
 
 Author
 Sagib Ul Sadab
