@@ -49,3 +49,9 @@ def main():
     except socket.gaierror:
         print("Could not resolve that hostname. Check spelling.")
         return
+    
+    print("\nSimple TCP Port Scanner")
+    print("-----------------------")
+    print("Target:", target)
+    print("IP:    ", target_ip)
+    print("\nScanning common ports...\n")
