@@ -55,3 +55,12 @@ def main():
     print("Target:", target)
     print("IP:    ", target_ip)
     print("\nScanning common ports...\n")
+
+    start = time.time()
+    open_ports = []
+
+    # Scan each port in our small list
+    for port, service in COMMON_PORTS.items():
+        if is_port_open(target_ip, port):
+            open_ports.append((port, service))
+            print(f"OPEN  {port:<5} ({service})")
